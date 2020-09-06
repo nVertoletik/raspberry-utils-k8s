@@ -1,0 +1,1 @@
+helm install nfs-provisioner --set nfs.server=NFS_SERVER_IP --set nfs.path=HOST_PATH --set image.repository=quay.io/external_storage/nfs-client-provisioner-arm stable/nfs-client-provisioner --namespace nfs
