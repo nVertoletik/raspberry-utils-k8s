@@ -1,0 +1,15 @@
+- name: Updates the Hosts
+  hosts: raspberry_cluster
+  tasks:
+    - name: Update Repositories
+      apt:
+        update_cache: yes
+      become: yes
+    - name: Updates packages
+      apt:
+        upgrade: yes
+      become: yes
+    - name: Removes older packages
+      apt:
+        autoremove: yes
+      become: yes
